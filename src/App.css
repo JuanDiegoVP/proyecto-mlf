@@ -1,0 +1,13 @@
+* {
+  text-decoration: none;
+  color: #cfc79c;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgb(32 33 36);
+}

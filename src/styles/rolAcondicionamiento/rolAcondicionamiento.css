@@ -1,0 +1,164 @@
+body {
+  width: 100%;
+  background-color: rgb(32 33 36);
+}
+.main {
+  width: 100%;
+}
+/*Container of conditioning and milling form*/
+.main__form-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2.5rem;
+}
+/*Conditioning form*/
+.conditioning-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 10px 0 10px;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: #cfc79c;
+}
+.conditioning-form__label {
+  color: #cfc79c;
+}
+.conditioning-form__input {
+  border: 1px solid #cfc79c67;
+  border-radius: 0.5rem;
+  background-color: #cfc79c33;
+  color: #cfc79c;
+}
+.conditioning-form__select {
+  border-radius: 0.5rem;
+  background-color: #454444;
+  color: #cfc79c;
+}
+.conditioning-form__submit {
+  height: 3rem;
+  background-color: #cfc79c0a;
+  color: #cfc79c;
+  border: 1px solid #cfc79c;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.conditioning-form__submit:hover {
+  font-weight: 700;
+  background-color: #e7cd63ee;
+  border: 1px solid #1d1919;
+  color: #1d1919;
+  transition: 0.5s;
+}
+/*Milling form*/
+.milling-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px 10px 0px 10px;
+  font-size: 1.5rem;
+  color: #cfc79c;
+}
+.milling-form__label {
+  color: #cfc79c;
+}
+.milling-form__input {
+  border: 1px solid #cfc79c67;
+  border-radius: 0.5rem;
+  background-color: #cfc79c33;
+  color: #cfc79c;
+}
+.milling-form__select {
+  border-radius: 0.5rem;
+  background-color: #454444;
+  color: #cfc79c;
+}
+.milling-form__submit {
+  grid-row: 4;
+  height: 3rem;
+  color: #cfc79c;
+  background-color: #cfc79c0a;
+  border: 1px solid #cfc79c;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.milling-form__submit:hover {
+  font-weight: 700;
+  background-color: #e7cd63ee;
+  border: 1px solid #1d1919;
+  color: #1d1919;
+  transition: 0.5s;
+}
+
+/*Main content*/
+
+.main__rols-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 146rem;
+  overflow: hidden;
+  margin: 15px;
+  color: #cfc79c;
+}
+/*Conditioning rol*/
+.conditioning-rol__rol-title {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: #454444;
+  border: 1px solid #cfc79c;
+  border-radius: 5px;
+}
+.conditioning-rol-columns-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.conditioning-rol-columns-container__column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Milling rol*/
+
+.milling-rol {
+  width: 100%;
+  overflow-y: scroll;
+}
+/*Milling rol scroll*/
+.milling-rol::-webkit-scrollbar {
+  width: 10px;
+}
+.milling-rol::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.milling-rol::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.milling-rol::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.milling-rol__rol-title {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: #454444;
+  border: 1px solid #cfc79c;
+  border-radius: 5px;
+}
+.milling-rol__rol-day {
+  display: flex;
+  justify-content: center;
+  background-color: #cfc79c0a;
+  border: 1px solid #cfc79c;
+  border-radius: 5px;
+}
+.milling-rol-columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.milling-rol-columns-container__column {
+  display: flex;
+  flex-direction: column;
+}

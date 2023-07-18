@@ -1,0 +1,48 @@
+.fraction-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+.fraction-container__calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 40rem;
+  height: 40rem;
+  align-items: center;
+  border: 2px solid #cfc79c;
+  border-radius: 20px;
+}
+.fraction-container__title {
+  grid-column: span 4;
+  justify-self: center;
+}
+.fraction-container__ingrese {
+  justify-self: center;
+  grid-column: span 2;
+  font-size: 1.5rem;
+}
+.fraction-container__input {
+  justify-self: center;
+  grid-column: span 2;
+  background-color: rgb(71, 73, 72);
+  color: #cfc79c;
+  border: 1px solid #cfc79c;
+  border-radius: 5px;
+}
+.fraction-container__calcular {
+  grid-area: 3 / 1 / 5 / 5;
+  width: 20rem;
+  height: 6rem;
+  justify-self: center;
+  border-radius: 5px;
+  border: 1px solid #cfc79c;
+  background-color: rgb(36, 77, 56);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.fraction-container__result {
+  grid-area: 5 / 1 / 9 / 5;
+  justify-self: center;
+  font-size: 6rem;
+}
