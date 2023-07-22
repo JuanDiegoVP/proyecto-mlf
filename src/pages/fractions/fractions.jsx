@@ -1,22 +1,59 @@
 import React, { useState } from "react";
 import "../../styles/fractions/fractions.css";
+import { fractionData } from "../../data/fractions";
 
 function Fractions() {
   let [data, setData] = useState(0);
 
   function calc() {
-    const info = parseFloat(document.getElementById("amount").value);
+    const medida = parseFloat(document.getElementById("amount").value);
     let resultado = document.getElementById("result");
 
-    let rInfo = 1 / info;
-    let i = 1;
+    let posicionPulgadas = 0;
+    let posicionMilimetros = 0;
 
-    for (i; i <= rInfo; i++) {
-      if (info === info * i) {
-        return (resultado.innerHTML = `${i}/${rInfo}`);
+    let numSavedPulgadas = 0;
+    let posSavedPulgadas = 0;
+
+    let numSavedMilimetros = 0;
+    let posSavedMilimetros = 0;
+
+    fractionData.decimalPulgada.map((p, i) => {
+      let first = Math.abs(p - medida).toFixed(4);
+
+      if (i === 0) {
+        numSavedPulgadas = first;
+        posSavedPulgadas = p;
       }
-      resultado = 0;
-    }
+
+      if (numSavedPulgadas > first) {
+        numSavedPulgadas = first;
+        posSavedPulgadas = p;
+      }
+    });
+    fractionData.decimalMilimetros.map((m, i) => {
+      let first = Math.abs(m - medida).toFixed(4);
+
+      if (i === 0) {
+        numSavedMilimetros = first;
+        posSavedMilimetros = m;
+      }
+
+      if (numSavedMilimetros > first) {
+        numSavedMilimetros = first;
+        posSavedMilimetros = m;
+      }
+    });
+
+    posicionPulgadas = posSavedPulgadas;
+    posicionMilimetros = posSavedMilimetros;
+
+    console.log(
+      numSavedPulgadas,
+      posicionPulgadas,
+      numSavedMilimetros,
+      posicionMilimetros
+    );
   }
 
   return (

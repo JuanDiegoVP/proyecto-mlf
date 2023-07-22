@@ -10,6 +10,10 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 2.5rem;
+  @media screen and (max-width: 941px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 /*Conditioning form*/
 .conditioning-form {
@@ -19,9 +23,21 @@ body {
   gap: 5px;
   font-size: 1.5rem;
   color: #cfc79c;
+  @media screen and (max-width: 1341px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  @media screen and (min-width: 1800px) {
+    padding: 10px 40px 0 40px;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
 }
 .conditioning-form__label {
   color: #cfc79c;
+  @media screen and (max-width: 350px) {
+    font-size: 1.1rem;
+  }
 }
 .conditioning-form__input {
   border: 1px solid #cfc79c67;
@@ -33,6 +49,7 @@ body {
   border-radius: 0.5rem;
   background-color: #454444;
   color: #cfc79c;
+  cursor: pointer;
 }
 .conditioning-form__submit {
   height: 3rem;
@@ -41,6 +58,9 @@ body {
   border: 1px solid #cfc79c;
   border-radius: 50px;
   cursor: pointer;
+  @media screen and (max-width: 1341px) {
+    grid-row: 7;
+  }
 }
 .conditioning-form__submit:hover {
   font-weight: 700;
@@ -57,9 +77,21 @@ body {
   padding: 10px 10px 0px 10px;
   font-size: 1.5rem;
   color: #cfc79c;
+  @media screen and (max-width: 1341px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  @media screen and (min-width: 1800px) {
+    padding: 10px 40px 0 40px;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
 }
 .milling-form__label {
   color: #cfc79c;
+  @media screen and (max-width: 350px) {
+    font-size: 1.1rem;
+  }
 }
 .milling-form__input {
   border: 1px solid #cfc79c67;
@@ -71,6 +103,7 @@ body {
   border-radius: 0.5rem;
   background-color: #454444;
   color: #cfc79c;
+  cursor: pointer;
 }
 .milling-form__submit {
   grid-row: 4;
@@ -80,6 +113,9 @@ body {
   border: 1px solid #cfc79c;
   border-radius: 50px;
   cursor: pointer;
+  @media screen and (max-width: 1341px) {
+    grid-row: 6;
+  }
 }
 .milling-form__submit:hover {
   font-weight: 700;
@@ -97,13 +133,14 @@ body {
   gap: 1rem;
   height: 146rem;
   overflow: hidden;
-  margin: 15px;
+  margin: 25px 15px 15px 15px;
   color: #cfc79c;
 }
 /*Conditioning rol*/
 .conditioning-rol__rol-title {
   position: sticky;
   top: 0;
+  margin-top: 0;
   text-align: center;
   background-color: #454444;
   border: 1px solid #cfc79c;
@@ -142,6 +179,7 @@ body {
 .milling-rol__rol-title {
   position: sticky;
   top: 0;
+  margin-top: 0;
   text-align: center;
   background-color: #454444;
   border: 1px solid #cfc79c;

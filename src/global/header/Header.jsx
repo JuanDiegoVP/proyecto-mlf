@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/header/header.css";
 import mlfLogo from "../../assets/mlfLogo.png";
 import { Link } from "react-router-dom";
@@ -11,21 +11,37 @@ function Header() {
     <>
       <header className="header">
         <img className="header__logo" src={mlfLogo} alt="logo de molino" />
-        <ul className="header__ul">
-          <li className="header__li">
-            <HomeIcon />
-            <Link to="/">Home</Link>
-          </li>
-          <li className="header__li">
-            <AssignmentIcon />
-            <Link to="/rols">Rols</Link>
-          </li>
-          <li className="header__li">
-            <CalculateIcon />
-            <Link to="/fractions">Fractions</Link>
-          </li>
-          <li className="header__li">item</li>
-        </ul>
+        <input
+          type="checkbox"
+          id="vertical-menu"
+          className="header__vertical-menu"
+        />
+        <label htmlFor="vertical-menu" className="header__label">
+          <span className="header__menu-icon"></span>
+        </label>
+        <nav className="header__nav">
+          <ul className="header__ul header__ul--vertical">
+            <li className="header__li">
+              <Link className="header__link" to="/">
+                <HomeIcon />
+                <p className="header__item">Home</p>
+              </Link>
+            </li>
+            <li className="header__li">
+              <Link className="header__link" to="/rols">
+                <AssignmentIcon />
+                <p className="header__item">Rols</p>
+              </Link>
+            </li>
+            <li className="header__li">
+              <Link className="header__link" to="/fractions">
+                <CalculateIcon />
+                <p className="header__item">Fractions</p>
+              </Link>
+            </li>
+            <li className="header__li">item</li>
+          </ul>
+        </nav>
       </header>
     </>
   );

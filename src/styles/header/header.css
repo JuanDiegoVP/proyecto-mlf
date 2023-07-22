@@ -16,10 +16,85 @@
   border-radius: 50%;
   object-fit: contain;
 }
+.header__nav {
+  width: 100%;
+  transition: max-height 0.5s ease-out;
+}
+.header__menu-icon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 24px;
+  right: 5rem;
+  @media screen and (min-width: 441px) {
+    display: none;
+  }
+}
+.header__menu-icon::before,
+.header__menu-icon::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.header__menu-icon::before {
+  top: 5px;
+}
+.header__menu-icon::after {
+  top: -5px;
+}
+.header__vertical-menu {
+  display: none;
+}
+.header__vertical-menu:checked ~ .header__nav .header__ul--vertical {
+  position: absolute;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  box-sizing: border-box;
+  justify-content: center;
+  top: 7rem;
+  right: 0rem;
+  width: 13rem;
+  height: 19rem;
+  margin: 0;
+  padding: 1rem 0 0 0;
+  background-color: rgb(43, 46, 45);
+  border-radius: 0 0 1rem 1rem;
+  border: 0.1rem solid #cfc79c;
+  border-top: none;
+  @media screen and (min-width: 440px) {
+    display: none;
+  }
+}
+.header__vertical-menu:checked ~ .header__label .header__menu-icon {
+  background: transparent;
+}
+.header__vertical-menu:checked ~ .header__label .header__menu-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header__vertical-menu:checked ~ .header__label .header__menu-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
 .header__ul {
   display: flex;
-  width: 45rem;
-  justify-content: center;
+  justify-content: flex-end;
+  @media screen and (max-width: 440px) {
+    display: none;
+  }
+}
+.header__toggle {
+  display: none;
+  margin-right: 5rem;
+  background-color: rgb(43, 46, 45);
+  @media screen and (max-width: 440px) {
+    display: inline-block;
+  }
 }
 .header__li {
   display: flex;
@@ -35,4 +110,22 @@
   background-color: rgb(43, 46, 45);
   list-style: none;
   text-decoration: none;
+  @media screen and (max-width: 560px) {
+    width: 5rem;
+  }
+  @media screen and (max-width: 440px) {
+    margin-right: 0;
+  }
+}
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.header__item {
+  margin-left: 0.7rem;
+  @media screen and (max-width: 560px) {
+    display: none;
+  }
 }

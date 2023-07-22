@@ -340,14 +340,6 @@ function RolAcondicionamiento() {
             className="form-container__conditioning-form conditioning-form"
             action="#"
           >
-            <label className="conditioning-form__label" htmlFor="nolavada">
-              No. Lavada
-            </label>
-            <input
-              className="conditioning-form__input"
-              type="number"
-              id="nolavada"
-            />
             <label className="conditioning-form__label" htmlFor="nolote">
               No. Lote Inicio
             </label>
@@ -363,6 +355,14 @@ function RolAcondicionamiento() {
               className="conditioning-form__input"
               type="number"
               id="nohasta"
+            />
+            <label className="conditioning-form__label" htmlFor="nolavada">
+              No. Lavada
+            </label>
+            <input
+              className="conditioning-form__input"
+              type="number"
+              id="nolavada"
             />
             <label className="conditioning-form__label" htmlFor="tipo">
               Tipo lavada
